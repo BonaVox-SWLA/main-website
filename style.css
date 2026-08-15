@@ -989,8 +989,20 @@ input {
     grid-template-columns: auto;
   }
 
+  .singer-title {
+    flex-direction: column;
+    margin-bottom: 2rem;
+
+    a {
+      margin-top: -1.5rem;
+    }
+  }
+
   .singer-image, .event-image {
     order: -1;
+  }
+  .tags {
+    justify-self: center;
   }
 
   /* Videos */
