@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BonaVox</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="main.js"></script>
+    <script src="https://kit.fontawesome.com/7ce2089e78.js" crossorigin="anonymous"></script>
+    <link rel="icon" href="images/logos:vectors/BVicon.ico">
+</head>
+
+<body>
+    <header>
+        <!-- BANNER -->
+        <a class="logo" href="index.html"><img class="logo-image" id="logo-header"
+                src="images/logos:vectors/BV_Logo_2_0.png" alt="BonaVox logo"></a>
+
+        <nav class="desktop-menu">
+            <a href="index.html" class="current-page">Home</a> |
+            <details name="About">
+                <summary>About</summary>
+                <div class="about-submenu">
+                    <a href="about.html">About Us</a>
+                    <br>
+                    <a href="singers.html">Singers</a>
+                </div>
+            </details> |
+            <a href="videos.html">Videos</a> |
+            <a href="support.html">Support Us</a> |
+            <a href="contact.html">Contact</a>
+        </nav>
+
+        <!-- HAMBURGER MENU  BUTTON-->
+        <button class="menu-button" id="menu-button" onclick="toggleMenu()">
+            <i class="fa-solid fa-bars"></i>
+        </button>
+    </header>
+
+    <!-- MOBILE MENU -->
+    <nav class="mobile-nav" id="mobile-menu" aria-expanded="false" aria-hidden="true">
+        <i class="fa-solid fa-x" onclick="closeMenu()"></i>
+        <br>
+        <a href="index.html" class="current-page">Home</a>
+        <br>
+        <details name="About" onmouseenter="openAboutMobile()">
+            <summary>About</summary>
+            <div class="mobile-submenu">
+                <a href="about.html">About Us</a>
+                <br>
+                <a href="singers.html">Singers</a>
+            </div>
+        </details>
+        <a href="videos.html">Videos</a>
+        <br>
+        <a href="support.html">Support Us</a>
+        <br>
+        <a href="contact.html">Contact</a>
+        <br>
+    </nav>
+
+    <main>
+        <section class="home-top">
+            <!-- Hero image -->
+            <section class="hero" id="hero-home">
+                <div class="hero-text">
+                    <h1 style="text-align: left;">Bonavox <span>est. 2022</span></h1>
+                    <p>
+                        Vocal musicians committed to providing access to professional vocal performances for the
+                        enrichment of the Southwest Louisiana community and beyond.</p>
+                    <div class="hire">
+                        <a href="contact.html" class="hire-link">Hire us for your event!</a>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Upcoming sidebar -->
+            <section class="upcoming">
+                <h1 class="upcoming-text">Upcoming...</h1>
+                <div class="upcoming-poster">
+                    <a href="#">
+                        <img class="upcoming-poster-image" src="images/event posters/tba-image.jpg"
+                            alt="To be announced">
+                    </a>
+                </div>
+            </section>
+        </section>
+
+        <!-- Previous Concerts -->
+        <section class="prev-events">
+            <h1>Previous Concerts</h1>
+
+            <!-- MOST RECENT THREE HERE -->
+            <div class="concert-grid" id="concerts-preview">
+                <!-- Spirit 2026 -->
+                <div class="card concert-card" onmouseover="showBlurb(event, `spi-26`)"
+                    onmouseout="hideBlurb(event, `spi-26`)">
+                    <div class="concert-poster">
+                        <img src="images/event posters/spirit-26.png" alt="Spirit 2026 poster">
+                    </div>
+                    <div class="blurb" id="spi-26">
+                        <div class="evt-blurb-text">
+                            <h2>Spirit 2026: Water & Words</h2>
+                            <p>July 18, 2026, 7:00 PM – 8:30 PM <br>
+                                St. Barnabas Episcopal Church, 400 Camellia Blvd, Lafayette, LA 70503, USA</p>
+                            <a href="concerts/spirit26.html">Learn more</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Good Shepherd 2026 -->
+                <div class="card concert-card" onmouseover="showBlurb(event, `gs-26`)"
+                    onmouseout="hideBlurb(event, `gs-26`)">
+                    <div class="concert-poster">
+                        <img src="images/event posters/good-shepherd-26.jpg" alt="Good Shepherd Summer Concert Series - Journey: Beside Still Waters concert poster">
+                    </div>
+                    <div class="blurb" id="gs-26">
+                        <div class="evt-blurb-text">
+                            <h2>Good Shepherd Summer Concert Series - Journey: Beside Still Waters</h2>
+                            <p>Jun 09, 2026, 7:30 PM – 9:00 PM <br>
+                                Good Shepherd Episcopal Lake Charles LA, 715 Kirkman St, Lake Charles, LA 70601, USA</p>
+                            <a href="concerts/goodshepherd26.html">Learn more</a>
+                        </div>
+
+                    </div>
+                </div>
+
+                <!-- Conversations 2026 -->
+                <div class="card concert-card" onmouseover="showBlurb(event, `conv-26`)"
+                    onmouseout="hideBlurb(event, `conv-26`)">
+                    <div class="concert-poster">
+                        <img src="images/event posters/conversations-26.png" alt="Conversations 2026 poster">
+                    </div>
+                    <div class="blurb" id="conv-26">
+                        <div class="evt-blurb-text">
+                            <h2>Conversations 2026</h2>
+                            <p>Jun 07, 2026, 6:00 PM – 7:30 PM <br>
+                                The Cary Saurage Community Arts Center, 233 St Ferdinand St, Baton Rouge, LA 70802, USA
+                            </p>
+                            <a href="concerts/conversations26.html">Learn more</a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <button class="load-button" id="load-button" onclick="loadMore()">Load more</button>
+
+            <!-- ALL THE REST HERE -->
+            <div class="concert-grid" id="concert-overflow" aria-hidden="true">
+                <!-- Tenebrae 2026 -->
+                <div class="card concert-card" onmouseover="showBlurb(event, `ten-26`)"
+                    onmouseout="hideBlurb(event, `ten-26`)">
+                    <div class="concert-poster">
+                        <img src="images/event posters/tenebrae-26.png" alt="Tenebræ 2026 poster">
+                    </div>
+                    <div class="blurb" id="ten-26">
+                        <div class="evt-blurb-text">
+                            <h2>Tenebræ 2026</h2>
+                            <p>Feb 21, 2026, 6:00 PM – 7:30 PM <br>
+                                Church of the Holy Trinity, 900 South St, Vicksburg, MS 39180, USA</p>
+                            <a href="concerts/tenebrae26.html">Learn more</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Journey 2026 -->
+                <div class="card concert-card" onmouseover="showBlurb(event, `jou-26`)"
+                    onmouseout="hideBlurb(event, `jou-26`)">
+                    <div class="concert-poster">
+                        <img src="images/event posters/journey-26.png" alt="Journey 2026 poster">
+                    </div>
+                    <div class="blurb" id="jou-26">
+                        <div class="evt-blurb-text">
+                            <h2>Journey: Paths of Love and Light</h2>
+                            <p>Feb 21, 2026, 2:00 PM – 3:30 PM <br>
+                                Crawford Street United Methodist Church, 900 Crawford St, Vicksburg, MS 39180, USA
+                            </p>
+                            <a href="concerts/journey26.html">Learn more</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Epiphany 2026 -->
+                <div class="card concert-card" onmouseover="showBlurb(event, `epi-26`)"
+                    onmouseout="hideBlurb(event, `epi-26`)">
+                    <div class="concert-poster">
+                        <img src="images/event posters/epiphany-26.png" alt="Epiphany 2026 poster">
+                    </div>
+                    <div class="blurb" id="epi-26">
+                        <div class="evt-blurb-text">
+                            <h2>Epiphany 2026</h2>
+                            <p>Jan 11, 2026, 7:00 PM – 8:30 PM <br>
+                                Kinder, 607 4th Ave, Kinder, LA 70648, USA</p>
+                            <a href="concerts/epiphany26.html">Learn more</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Mourning 2025 -->
+                <div class="card concert-card" onmouseover="showBlurb(event, `mou-25`)"
+                    onmouseout="hideBlurb(event, `mou-25`)">
+                    <div class="concert-poster">
+                        <img src="images/event posters/mourning-25.png" alt="Mourning 2025 poster">
+                    </div>
+                    <div class="blurb" id="mou-25">
+                        <div class="evt-blurb-text">
+                            <h2>Mourning: Heavenly Glory 2025</h2>
+                            <p>Nov 30, 2025, 3:00 PM <br>
+                                Tritico Theater-McNeese State University, 4205 Ryan St, Lake Charles, LA 70605, USA
+                            </p>
+                            <a href="concerts/mourning25.html">Learn more</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Spirit 2025 -->
+                <div class="card concert-card" onmouseover="showBlurb(event, `spi-25`)"
+                    onmouseout="hideBlurb(event, `spi-25`)">
+                    <div class="concert-poster">
+                        <img src="images/event posters/spirit-25.png" alt="Spirit 2025 poster">
+                    </div>
+                    <div class="blurb" id="spi-25">
+                        <div class="evt-blurb-text">
+                            <h2>SPIRIT: a joyful celebration</h2>
+                            <p>Jul 19, 2025, 7:00 PM – 8:30 PM <br>
+                                Lake Charles, 123 W Sale Rd, Lake Charles, LA 70605, USA</p>
+                            <a href="concerts/spirit25.html">Learn more</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Lake Charles Symphony -->
+                <div class="card concert-card" onmouseover="showBlurb(event, `lcs-25`)"
+                    onmouseout="hideBlurb(event, `lcs-25`)">
+                    <div class="concert-poster">
+                        <img src="images/event posters/lake-charles-25.png" alt="Lake Charles Symphony poster">
+                    </div>
+                    <div class="blurb" id="lcs-25">
+                        <div class="evt-blurb-text">
+                            <h2>Lake Charles Symphony: 2025 Fire and Light Season Finale</h2>
+                            <p>May 03, 2025, 6:00 PM – 9:00 PM <br>
+                                Lake Charles, 4205 Ryan St, Lake Charles, LA 70605, USA</p>
+                            <a href="concerts/lcs.html">Learn more</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Tenebrae 2025 -->
+                <div class="card concert-card" onmouseover="showBlurb(event, `ten-25`)"
+                    onmouseout="hideBlurb(event, `ten-25`)">
+                    <div class="concert-poster">
+                        <img src="images/event posters/tenebrae-25.png" alt="Tenebrae 2025 poster">
+                    </div>
+                    <div class="blurb" id="ten-25">
+                        <div class="evt-blurb-text">
+                            <h2>Tenebræ 2025: a service of shadows</h2>
+                            <p>Mar 14, 2025, 7:00 PM – 8:30 PM <br>
+                                Thibodaux, 721 Canal Blvd, Thibodaux, LA 70301, USA</p>
+                            <a href="concerts/tenebrae25.html">Learn more</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Epiphany 2025 -->
+                <div class="card concert-card" onmouseover="showBlurb(event, `epi-25`)"
+                    onmouseout="hideBlurb(event, `epi-25`)">
+                    <div class="concert-poster">
+                        <img src="images/event posters/epiphany-25.png" alt="Epiphany 2025 poster">
+                    </div>
+                    <div class="blurb" id="epi-25">
+                        <div class="evt-blurb-text">
+                            <h2>Epiphany 2025: Songs on Dreams, Stars, and Destiny</h2>
+                            <p>Jan 11, 2025, 7:30 PM – 9:10 PM <br>
+                                Lafayette, Ragley, Beaumont</p>
+                            <a href="concerts/epiphany25.html">Learn more</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Mourning 2024 -->
+                <div class="card concert-card" onmouseover="showBlurb(event, `mou-24`)"
+                    onmouseout="hideBlurb(event, `mou-24`)">
+                    <div class="concert-poster">
+                        <img src="images/event posters/mourning-24.png" alt="Mourning 2024 poster">
+                    </div>
+                    <div class="blurb" id="mou-24">
+                        <div class="evt-blurb-text">
+                            <h2>Mourning 2024 Concert Series</h2>
+                            <p>Nov 23, 2024, 7:00 PM – 8:30 PM <br>
+                                St. John the Evangelist Catholic Church, 707 Orange Street Mermentau, LA 70556</p>
+                            <a href="concerts/mourning24.html">Learn more</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Good Shepherd 2024 -->
+                <div class="card concert-card" onmouseover="showBlurb(event, `gs-24`)"
+                    onmouseout="hideBlurb(event, `gs-24`)">
+                    <div class="concert-poster">
+                        <img src="images/event posters/good-shepherd-24.png" alt="Good Shepherd 2024 poster">
+                    </div>
+                    <div class="blurb" id="gs-24">
+                        <div class="evt-blurb-text">
+                            <h2>Journey from the Earth to the Heavens</h2>
+                            <p>Jun 11, 2024, 7:30 PM <br>
+                                Good Shepherd Episcopal Church, 715 Kirkman St, Lake Charles, LA 70601, USA</p>
+                            <a href="concerts/goodshepherd24.html">Learn more</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Tenebrae 2024 -->
+                <div class="card concert-card" onmouseover="showBlurb(event, `ten-24`)"
+                    onmouseout="hideBlurb(event, `ten-24`)">
+                    <div class="concert-poster">
+                        <img src="images/event posters/tenebrae-24.png" alt="Tenebræ 2024 poster">
+                    </div>
+                    <div class="blurb" id="ten-24">
+                        <div class="evt-blurb-text">
+                            <h2>Tenebræ 2024</h2>
+                            <p>Mar 24, 2024, 7:00 PM <br>
+                                Sulphur, 1109 Cypress St, Sulphur, LA 70663, USA</p>
+                            <a href="concerts/tenebrae24.html">Learn more</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Epiphany 2024 -->
+                <div class="card concert-card" onmouseover="showBlurb(event, `epi-24`)"
+                    onmouseout="hideBlurb(event, `epi-24`)">
+                    <div class="concert-poster">
+                        <img src="images/event posters/epiphany-24.png" alt="Epiphany 2024 poster">
+                    </div>
+                    <div class="blurb" id="epi-24">
+                        <div class="evt-blurb-text">
+                            <h2>Epiphany 2024</h2>
+                            <p>Jan 06, 2024, 6:30 PM
+                                St. Luke-Simpson UMC, 1500 Country Club Road Lake Charles, LA</p>
+                            <a href="concerts/epiphany24.html">Learn more</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Epiphany 2025 -->
+                <div class="card concert-card" onmouseover="showBlurb(event, `epi-23`)"
+                    onmouseout="hideBlurb(event, `epi-23`)">
+                    <div class="concert-poster">
+                        <img src="images/event posters/epiphany-23.jpg" alt="Epiphany 2023 poster">
+                    </div>
+                    <div class="blurb" id="epi-23">
+                        <div class="evt-blurb-text">
+                            <h2>Epiphany 2023</h2>
+                            <p>Jan 05, 2024, 6:00 PM <br>
+                                Lake Charles, LA</p>
+                            <a href="concerts/epiphany23.html">Learn more</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Mourning 2023 -->
+                <div class="card concert-card" onmouseover="showBlurb(event, `mou-23`)"
+                    onmouseout="hideBlurb(event, `mou-23`)">
+                    <div class="concert-poster">
+                        <img src="images/event posters/mourning-23.jpg" alt="Mourning 2023 poster">
+                    </div>
+                    <div class="blurb" id="mou-23">
+                        <div class="evt-blurb-text">
+                            <h2>Mourning: A Journey of Grief and Hope</h2>
+                            <p>Nov 02, 2023, 2:00 PM <br>
+                                Multiple Locations</p>
+                            <a href="concerts/mourning23.html">Learn more</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="contact-area">
+            <img class="logo-image" id="logo-footer" src="images/logos:vectors/BV_Logo_2_white.png" alt="BonaVox logo white">
+            <p>Contact us: <a href="mailto:info@bonavoxswla.org">info@bonavoxswla.org</a></p>
+            <div class="social-icons">
+                <a href="https://www.facebook.com/p/BonaVox-100088946990354/">
+                    <i class="fa-brands fa-facebook"></i>
+                </a>
+                <a href="https://www.instagram.com/bonavoxswla/">
+                    <i class="fa-brands fa-instagram"></i>
+                </a>
+
+            </div>
+        </div>
+        <div class="credits">
+            <p>© BonaVox SWLA 2026. Site by <a href="https://github.com/freyamurray">Freya Murray</a> </p>
+        </div>
+    </footer>
+</body>
+
+</html>

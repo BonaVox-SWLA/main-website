@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- These need to be edited for each page -->
+    <meta property="og:title" content="Good Sherpherd: Journey Beside Still Waters">
+    <meta property="og:description" content="BonaVox returns to Good Shepherd’s Summer Music Festival for 2026 with beloved favorites and a
+    first look at exciting new music for the coming season. Our concert will be a celebration of five centuries of choral music — joyful, searching, hopeful, alive. The program will include selections ranging from the Renaissance to the Classical period, and American favorites from the Sacred Harp">
+    <meta property="og:type" content="website">
+
+    <title>BonaVox | Good Sherpherd: Journey Beside Still Waters</title>
+    <link rel="stylesheet" href="../style.css">
+    <script src="https://kit.fontawesome.com/7ce2089e78.js" crossorigin="anonymous"></script>
+    <link rel="icon" href="../images/logos:vectors/BVicon.ico">
+    <script src="../main.js" defer></script>
+</head>
+
+<body>
+    <header>
+        <!-- BANNER -->
+        <a class="logo" href="../index.html"><img class="logo-image" id="logo-header"
+                src="../images/logos:vectors/BV_Logo_2_0.png" alt="BonaVox logo"></a>
+
+        <nav class="desktop-menu">
+            <a href="../index.html">Home</a> |
+            <details name="About">
+                <summary>About</summary>
+                <div class="about-submenu">
+                    <a href="../about.html">About Us</a>
+                    <br>
+                    <a href="../singers.html">Singers</a>
+                </div>
+            </details> |
+            <a href="../videos.html">Videos</a> |
+            <a href="../support.html">Support Us</a> |
+            <a href="../contact.html">Contact</a>
+        </nav>
+
+        <!-- HAMBURGER MENU  BUTTON-->
+        <button class="menu-button" id="menu-button" onclick="toggleMenu()">
+            <i class="fa-solid fa-bars"></i>
+        </button>
+    </header>
+
+    <!-- MOBILE MENU -->
+    <nav class="mobile-nav" id="mobile-menu" aria-expanded="false" aria-hidden="true">
+        <i class="fa-solid fa-x" onclick="closeMenu()"></i>
+        <br>
+        <a href="../index.html">Home</a>
+        <br>
+        <details name="About" onmouseenter="openAboutMobile()">
+            <summary>About</summary>
+            <div class="mobile-submenu">
+                <a href="../about.html">About Us</a>
+                <br>
+                <a href="../singers.html">Singers</a>
+            </div>
+        </details>
+        <a href="../videos.html">Videos</a>
+        <br>
+        <a href="../support.html">Support Us</a>
+        <br>
+        <a href="../contact.html">Contact</a>
+        <br>
+    </nav>
+
+    <main>
+        <!-- MAIN SECTION -->
+        <div class="hero event-hero">
+            <div class="event-about">
+                <!-- KEY INFO -->
+                <div class="event-title">
+                    <!-- EVENT TITLE -->
+                    <h1 class="event-title-text">Good Shepherd Summer Concert Series -- Journey: Beside Still Waters
+                    </h1>
+                </div>
+                <div class="tags">
+                    <!-- date -->
+                    <span>
+                        <i class="fa-regular fa-calendar"></i>
+                        Tuesday June 9
+                    </span>
+                    <!-- time -->
+                    <span>
+                        <i class="fa-regular fa-clock"></i>
+                        7:30 - 9:00 pm
+                    </span>
+                    <!-- location -->
+                    <span>
+                        <i class="fa-solid fa-map-pin"></i>
+                        Lake Charles, LA
+                    </span>
+                </div>
+
+                <!-- EVENT INFO -->
+                <div class="bio-text">
+                    <!-- address -->
+                    <p class="address">Good Shepherd Episcopal Lake Charles LA, 715 Kirkman St, Lake Charles, LA 70601,
+                        USA</p>
+                    <!-- about text -->
+                    <p>BonaVox returns to Good Shepherd’s Summer Music Festival for 2026 with beloved favorites and a
+                        first look at exciting new music for the coming season. Our concert will be a celebration of
+                        five centuries of choral music — joyful, searching, hopeful, alive. The program will include
+                        selections ranging from the Renaissance to the Classical period, and American favorites from the
+                        Sacred Harp.</p>
+                    <p>Tickets are $20 at the door, and season memberships are available for $60. Children under the age
+                        of 12 will be admitted free of charge. Season tickets can also be purchased online at <a
+                            href="www.GoodShepherd-LC.com">www.GoodShepherd-LC.com</a> (click on “Events” and then “2026
+                        Summer Music Festival”). Checks can be mailed to the church, made out to Good Shepherd, with
+                        “Summer Music Festival” in the memo line.</p>
+                </div>
+            </div>
+            <!-- Poster -->
+            <div class="event-image">
+                <img src="../images/event posters/good-shepherd-26.jpg" alt="Good Sherpherd 2026 poster">
+            </div>
+        </div>
+
+        <!-- SOCIAL SHARE BUTTONS -->
+        <div class="share">
+            <h2>Share this event</h2>
+            <a href="#" class="facebookBtn" target="_blank" aria-label="share to facebook">
+                <i class="fa-brands fa-facebook"></i>
+            </a>
+
+            <a href="#" class="twitterBtn" target="_blank" aria-label="share to twitter/X">
+                <i class="fa-brands fa-x-twitter"></i>
+            </a>
+
+            <a href="#" class="linkedinBtn" target="_blank" aria-label="share to linkedin">
+                <i class="fa-brands fa-linkedin"></i>
+            </a>
+        </div>
+    </main>
+
+    <footer>
+        <div class="contact-area">
+            <img class="logo-image" id="logo-footer" src="../images/logos:vectors/BV_Logo_2_white.png"
+                alt="BonaVox logo white">
+            <p>Contact us: <a href="mailto:info@bonavoxswla.org">info@bonavoxswla.org</a></p>
+            <div class="social-icons">
+                <a href="https://www.facebook.com/p/BonaVox-100088946990354/">
+                    <i class="fa-brands fa-facebook"></i>
+                </a>
+                <a href="https://www.instagram.com/bonavoxswla/">
+                    <i class="fa-brands fa-instagram"></i>
+                </a>
+
+            </div>
+        </div>
+        <div class="credits">
+            <p>© BonaVox SWLA 2026. Site by <a href="https://github.com/freyamurray">Freya Murray</a> </p>
+        </div>
+    </footer>
+</body>
+
+</html>

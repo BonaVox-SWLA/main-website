@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BonaVox | Singers</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="main.js" defer></script>
+    <script src="https://kit.fontawesome.com/7ce2089e78.js" crossorigin="anonymous"></script>
+    <link rel="icon" href="images/logos:vectors/BVicon.ico">
+
+</head>
+
+<body>
+    <header>
+        <!-- BANNER -->
+        <a class="logo" href="index.html"><img class="logo-image" id="logo-header"
+                src="images/logos:vectors/BV_Logo_2_0.png" alt="BonaVox logo"></a>
+
+        <nav class="desktop-menu">
+            <a href="index.html">Home</a> |
+            <details name="About">
+                <summary>About</summary>
+                <div class="about-submenu">
+                    <a href="about.html">About Us</a>
+                    <br>
+                    <a href="singers.html" class="current-page">Singers</a>
+                </div>
+            </details> |
+            <a href="videos.html">Videos</a> |
+            <a href="support.html">Support Us</a> |
+            <a href="contact.html">Contact</a>
+        </nav>
+
+        <!-- HAMBURGER MENU  BUTTON-->
+        <button class="menu-button" id="menu-button" onclick="toggleMenu()">
+            <i class="fa-solid fa-bars"></i>
+        </button>
+    </header>
+
+    <!-- MOBILE MENU -->
+    <nav class="mobile-nav" id="mobile-menu" aria-expanded="false" aria-hidden="true">
+        <i class="fa-solid fa-x" onclick="closeMenu()"></i>
+        <br>
+        <a href="index.html">Home</a>
+        <br>
+        <details name="About" onmouseenter="openAboutMobile()">
+            <summary>About</summary>
+            <div class="mobile-submenu">
+                <a href="about.html">About Us</a>
+                <br>
+                <a href="singers.html" class="current-page">Singers</a>
+            </div>
+        </details>
+        <a href="videos.html">Videos</a>
+        <br>
+        <a href="support.html">Support Us</a>
+        <br>
+        <a href="contact.html">Contact</a>
+        <br>
+    </nav>
+
+    <main>
+        <div class="singers-blurb">
+            <h1>Meet Our Singers</h1>
+            <p>Our choir is comprised of [X] singers. Hover to find out more about them!</p>
+        </div>
+        <div class="singers-grid">
+            <!-- SINGER 1 -->
+            <div class="card singer-card" onmouseover="showBlurb(event, 'singer-1')"
+                onmouseout="hideBlurb(event, 'singer-1')">
+                <div class="singer-image">
+                    <img src="images/photographs/singer-placeholder.jpg" alt="singer placeholder">
+                </div>
+                <div class="blurb" id="singer-1">
+                    <div class="singer-blurb-text">
+                        <h2>Lindsey Bower</h2>
+                        <p>Soprano</p>
+                        <a href="singers/singer-template.html">Learn more</a>
+                    </div>
+                </div>
+            </div>
+            <!-- SINGER 2 -->
+            <div class="card singer-card" onmouseover="showBlurb(event, 'singer-2')"
+                onmouseout="hideBlurb(event, 'singer-2')">
+                <img src="images/photographs/singer-placeholder.jpg" alt="singer placeholder">
+                <div class="blurb" id="singer-2">
+                    <div class="singer-blurb-text">
+                        <h2>Name</h2>
+                        <p>Alto</p>
+                        <a href="#">Learn more</a>
+                    </div>
+                </div>
+            </div>
+            <!-- SINGER 3 -->
+            <div class=" card singer-card" onmouseover="showBlurb(event, 'singer-3')"
+                onmouseout="hideBlurb(event, 'singer-3')">
+                <img src="images/photographs/singer-placeholder.jpg" alt="singer placeholder">
+                <div class="blurb" id="singer-3">
+                    <div class="singer-blurb-text">
+                        <h2>Name</h2>
+                        <p>Tenor</p>
+                        <a href="#">Learn more</a>
+                    </div>
+                </div>
+            </div>
+            <!-- SINGER 4 -->
+            <div class=" card singer-card" onmouseover="showBlurb(event, 'singer-4')"
+                onmouseout="hideBlurb(event, 'singer-4')">
+                <img src="images/photographs/singer-placeholder.jpg" alt="singer placeholder">
+                <div class="blurb" id="singer-4">
+                    <div class="singer-blurb-text">
+                        <h2>Name</h2>
+                        <p>Bass</p>
+                        <a href="#">Learn more</a>
+                    </div>
+                </div>
+            </div>
+            <!-- SINGER 5 -->
+            <div class="card singer-card" onmouseover="showBlurb(event, 'singer-5')"
+                onmouseout="hideBlurb(event, 'singer-5')">
+                <div class="singer-image">
+                    <img src="images/photographs/singer-placeholder.jpg" alt="singer placeholder">
+                </div>
+                <div class="blurb" id="singer-5">
+                    <div class="singer-blurb-text">
+                        <h2>Name</h2>
+                        <p>Soprano</p>
+                        <a href="#">Learn more</a>
+                    </div>
+                </div>
+            </div>
+            <!-- SINGER 6 -->
+            <div class="card singer-card" onmouseover="showBlurb(event, 'singer-6')"
+                onmouseout="hideBlurb(event, 'singer-6')">
+                <img src="images/photographs/singer-placeholder.jpg" alt="singer placeholder">
+                <div class="blurb" id="singer-6">
+                    <div class="singer-blurb-text">
+                        <h2>Name</h2>
+                        <p>Alto</p>
+                        <a href="#">Learn more</a>
+                    </div>
+                </div>
+            </div>
+            <!-- SINGER 7 -->
+            <div class=" card singer-card" onmouseover="showBlurb(event, 'singer-7')"
+                onmouseout="hideBlurb(event, 'singer-7')">
+                <img src="images/photographs/singer-placeholder.jpg" alt="singer placeholder">
+                <div class="blurb" id="singer-7">
+                    <div class="singer-blurb-text">
+                        <h2>Name</h2>
+                        <p>Tenor</p>
+                        <a href="#">Learn more</a>
+                    </div>
+                </div>
+            </div>
+            <!-- SINGER 8 -->
+            <div class=" card singer-card" onmouseover="showBlurb(event, 'singer-8')"
+                onmouseout="hideBlurb(event, 'singer-8')">
+                <img src="images/photographs/singer-placeholder.jpg" alt="singer placeholder">
+                <div class="blurb" id="singer-8">
+                    <div class="singer-blurb-text">
+                        <h2>Name</h2>
+                        <p>Bass</p>
+                        <a href="#">Learn more</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="contact-area">
+            <img class="logo-image" id="logo-footer" src="images/logos:vectors/BV_Logo_2_white.png" alt="">
+            <p>Contact us: <a href="mailto:info@bonavoxswla.org">info@bonavoxswla.org</a></p>
+            <div class="social-icons">
+                <a href="https://www.facebook.com/p/BonaVox-100088946990354/">
+                    <i class="fa-brands fa-facebook"></i>
+                </a>
+                <a href="https://www.instagram.com/bonavoxswla/">
+                    <i class="fa-brands fa-instagram"></i>
+                </a>
+
+            </div>
+        </div>
+        <div class="credits">
+            <p>© BonaVox SWLA 2026. Site by <a href="https://github.com/freyamurray">Freya Murray</a> </p>
+        </div>
+    </footer>
+
+</body>
+
+</html>

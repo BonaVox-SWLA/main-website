@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Us</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="main.js"></script>
+  <script src="https://kit.fontawesome.com/7ce2089e78.js" crossorigin="anonymous"></script>
+  <link rel="icon" href="images/logos:vectors/BVicon.ico">
+
+</head>
+
+<body>
+  <header>
+    <!-- BANNER -->
+    <a class="logo" href="index.html"><img class="logo-image" id="logo-header"
+        src="images/logos:vectors/BV_Logo_2_0.png" alt="BonaVox logo"></a>
+
+    <nav class="desktop-menu">
+      <a href="index.html">Home</a> |
+      <details name="About">
+        <summary>About</summary>
+        <div class="about-submenu">
+          <a href="about.html">About Us</a>
+          <br>
+          <a href="singers.html">Singers</a>
+        </div>
+      </details> |
+      <a href="videos.html">Videos</a> |
+      <a href="support.html">Support Us</a> |
+      <a href="contact.html" class="current-page">Contact</a>
+    </nav>
+
+    <!-- HAMBURGER MENU  BUTTON-->
+    <button class="menu-button" id="menu-button" onclick="toggleMenu()">
+      <i class="fa-solid fa-bars"></i>
+    </button>
+  </header>
+
+  <!-- MOBILE MENU -->
+  <nav class="mobile-nav" id="mobile-menu" aria-expanded="false" aria-hidden="true">
+    <i class="fa-solid fa-x" onclick="closeMenu()"></i>
+    <br>
+    <a href="index.html">Home</a>
+    <br>
+    <details name="About" onmouseenter="openAboutMobile()">
+      <summary>About</summary>
+      <div class="mobile-submenu">
+        <a href="about.html">About Us</a>
+        <br>
+        <a href="singers.html">Singers</a>
+      </div>
+    </details>
+    <a href="videos.html">Videos</a>
+    <br>
+    <a href="support.html">Support Us</a>
+    <br>
+    <a href="contact.html" class="current-page">Contact</a>
+    <br>
+  </nav>
+
+  <main>
+    <section class="contact-container">
+      <div class="contact-blurb">
+        <h1>Contact Us</h1>
+        <p>
+          We're happy to hear from you and ready to meet your musical needs.
+          Please let us know how we can help or work with you!</p>
+
+        <p>Fill out the form below if you would like to hire us for an event, ask a question, or get in touch!</p>
+      </div>
+      <form action="" method="post" name="contact-form">
+        <div class="form-top">
+          <div class="form-input" id="form-name">
+            <label for="name">Name </label><span class="req">*</span>
+            <input type="text" name="name" id="name" autocomplete="true" required placeholder="Full name">
+          </div>
+
+          <div class="form-input" id="form-email">
+            <label for="email">Email </label><span class="req">*</span>
+            <input type="text" name="email" id="name" autocomplete="true" required placeholder="example@gmail.com">
+          </div>
+        </div>
+        <div class="form-input">
+          <label for="subject">Subject</label>
+          <input type="text" name="subject" id="subject" placeholder="Event hire, concert, general query, etc.">
+        </div>
+        <div class="form-input">
+          <label for="message">Message <span class="req">*</span></label>
+          <br>
+          <textarea name="message" id="message" required rows="6"
+            placeholder="Write your message to us here"></textarea>
+        </div>
+        <div class="form-input submit-input">
+          <input class="submit-btn" type="submit" name="submit" value="Send Message">
+        </div>
+
+      </form>
+    </section>
+  </main>
+
+  <footer>
+    <div class="contact-area">
+      <img class="logo-image" id="logo-footer" src="images/logos:vectors/BV_Logo_2_white.png" alt="">
+      <p>Contact us: <a href="mailto:info@bonavoxswla.org">info@bonavoxswla.org</a></p>
+      <div class="social-icons">
+        <a href="https://www.facebook.com/p/BonaVox-100088946990354/">
+          <i class="fa-brands fa-facebook"></i>
+        </a>
+        <a href="https://www.instagram.com/bonavoxswla/">
+          <i class="fa-brands fa-instagram"></i>
+        </a>
+
+      </div>
+    </div>
+    <div class="credits">
+      <p>© BonaVox SWLA 2026. Site by <a href="https://github.com/freyamurray">Freya Murray</a> </p>
+    </div>
+  </footer>
+</body>
+
+</html>

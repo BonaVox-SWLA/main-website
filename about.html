@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About Us</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="main.js"></script>
+  <script src="https://kit.fontawesome.com/7ce2089e78.js" crossorigin="anonymous"></script>
+  <link rel="icon" href="images/logos:vectors/BVicon.ico">
+
+</head>
+
+<body>
+  <header>
+    <!-- BANNER -->
+    <a class="logo" href="index.html"><img class="logo-image" id="logo-header"
+        src="images/logos:vectors/BV_Logo_2_0.png" alt="BonaVox logo"></a>
+
+    <nav class="desktop-menu">
+      <a href="index.html">Home</a> |
+      <details name="About">
+        <summary style="text-decoration: underline;">About</summary>
+        <div class="about-submenu">
+          <a href="about.html" class="current-page">About Us</a>
+          <br>
+          <a href="singers.html">Singers</a>
+        </div>
+      </details> |
+      <a href="videos.html">Videos</a> |
+      <a href="support.html">Support Us</a> |
+      <a href="contact.html">Contact</a>
+    </nav>
+
+    <!-- HAMBURGER MENU  BUTTON-->
+    <button class="menu-button" id="menu-button" onclick="toggleMenu()">
+      <i class="fa-solid fa-bars"></i>
+    </button>
+  </header>
+
+  <!-- MOBILE MENU -->
+  <nav class="mobile-nav" id="mobile-menu" aria-expanded="false" aria-hidden="true">
+    <i class="fa-solid fa-x" onclick="closeMenu()"></i>
+    <br>
+    <a href="index.html">Home</a>
+    <br>
+    <details name="About" onmouseenter="openAboutMobile()">
+      <summary style="text-decoration: underline;">About</summary>
+      <div class="mobile-submenu">
+        <a href="about.html" class="current-page">About Us</a>
+        <br>
+        <a href="singers.html">Singers</a>
+      </div>
+    </details>
+    <a href="videos.html">Videos</a>
+    <br>
+    <a href="support.html">Support Us</a>
+    <br>
+    <a href="contact.html">Contact</a>
+    <br>
+  </nav>
+
+  <main>
+    <section class="about-top">
+      <div class="hero" id="hero-about">
+        <div class="hero-text" id="about-hero-text">
+          <h1>About us</h1>
+          <p>BonaVox: for the promotion of professional singing</p>
+        </div>
+      </div>
+      <section class="about-text">
+        <p>BonaVox is a group of South Louisiana vocal musicians committed to offering high-quality music performance
+          for the enrichment of Louisiana and beyond. Repertoire includes a capella music appropriate for mass,
+          weddings,
+          funerals, and general events.</p>
+        <p>While we are based in SWLA, a subset (quartet to octet typically) of our collective is able to coordinate and
+          travel across Louisiana and even sometimes into Texas or Mississippi for engagements.</p>
+        <p>Interested in bringing us out for something further away? Please reach out and let's see what is possible!
+        </p>
+        <p>Inquire below to hire BonaVox for your next event.</p>
+        <div class="hire" id="about-hire">
+          <a href="contact.html" class="hire-link">Contact Us</a>
+        </div>
+      </section>
+    </section>
+
+    <section class="about-story">
+      <div class="about-story-text">
+        <p>Formed in June 2022, BonaVox was created out of a desire to promote professional singing in SWLA. Each of the
+          BonaVox members are trained and/or have extensive experience in both solo and choral singing, and continue to
+          develop their skills by participating in this group. Their first complete year of programming, 2023, included
+          their self-produced Epiphany, Divine Love, and Mourning Concert Series; as well as a performance at This Is
+          Home Fest, and successful incorporation as a 501(c)(3) nonprofit organization. The mission of BonaVox SWLA is
+          to provide access to high-quality music performance for the enrichment of Louisiana and beyond, which is
+          achieved by presenting free concerts throughout the year and performances at assisted living facilities and
+          hospitals, with plans for other venues in the works.</p>
+        <p>Members of BonaVox are highly appreciative of their training from McNeese, UL Lafayette, La Tech, and LSU and
+          hope that this organization will provide inspiration and a pathway for new music graduates to enter the
+          professional industry. BonaVox also appreciates the SWLA churches that so graciously host their rehearsals and
+          free concerts, as well as provide additional opportunities for high-quality music performance from BonaVox
+          members. You will find BonaVox members engaged across the SWLA music community, including (and certainly not
+          limited to) The Louisiana Choral Foundation, LVAE-Louisiana Vocal Arts Ensemble, and ACTS Theatre, while also
+          enjoying the many events produced by the Arts & Humanities Council of SWLA.</p>
+        <p>In 2024, BonaVox has so far been privileged to have the American premiere of Phillip Cooke’s “Hodie Christus
+          Natus Est” on their Epiphany Concert, a professional development clinic with Dr. William Plummer of UL
+          Lafayette, and several invitations to perform across Louisiana and Mississippi. For their first tour, BonaVox
+          will travel to Vicksburg, Mississippi in July to present several concerts. Later this year, sponsorship
+          opportunities for the BonaVox mission will be announced, inviting members of the community to participate in
+          the longevity of this vital work.</p>
+      </div>
+      <div class="about-story-img">
+        <div class="hero-text" id="about-story-hero-text">
+          <h1>Our Story So Far</h1>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer>
+    <div class="contact-area">
+      <img class="logo-image" id="logo-footer" src="images/logos:vectors/BV_Logo_2_white.png" alt="BonaVox logo white">
+      <p>Contact us: <a href="mailto:info@bonavoxswla.org">info@bonavoxswla.org</a></p>
+      <div class="social-icons">
+        <a href="https://www.facebook.com/p/BonaVox-100088946990354/">
+          <i class="fa-brands fa-facebook"></i>
+        </a>
+        <a href="https://www.instagram.com/bonavoxswla/">
+          <i class="fa-brands fa-instagram"></i>
+        </a>
+
+      </div>
+    </div>
+    <div class="credits">
+      <p>© BonaVox SWLA 2026. Site by <a href="https://github.com/freyamurray">Freya Murray</a> </p>
+    </div>
+  </footer>
+
+</body>
+
+</html>

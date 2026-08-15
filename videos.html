@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BonaVox | Videos</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="main.js" defer></script>
+  <script src="https://kit.fontawesome.com/7ce2089e78.js" crossorigin="anonymous"></script>
+  <link rel="icon" href="images/logos:vectors/BVicon.ico">
+
+</head>
+
+<body>
+  <header>
+    <!-- BANNER -->
+    <a class="logo" href="index.html"><img class="logo-image" id="logo-header"
+        src="images/logos:vectors/BV_Logo_2_0.png" alt="BonaVox logo"></a>
+
+    <nav class="desktop-menu">
+      <a href="index.html">Home</a> |
+      <details name="About">
+        <summary>About</summary>
+        <div class="about-submenu">
+          <a href="about.html">About Us</a>
+          <br>
+          <a href="singers.html">Singers</a>
+        </div>
+      </details> |
+      <a href="videos.html" class="current-page">Videos</a> |
+      <a href="support.html">Support Us</a> |
+      <a href="contact.html">Contact</a>
+    </nav>
+
+    <!-- HAMBURGER MENU  BUTTON-->
+    <button class="menu-button" id="menu-button" onclick="toggleMenu()">
+      <i class="fa-solid fa-bars"></i>
+    </button>
+  </header>
+
+  <!-- MOBILE MENU -->
+  <nav class="mobile-nav" id="mobile-menu" aria-expanded="false" aria-hidden="true">
+    <i class="fa-solid fa-x" onclick="closeMenu()"></i>
+    <br>
+    <a href="index.html">Home</a>
+    <br>
+    <details name="About" onmouseenter="openAboutMobile()">
+      <summary>About</summary>
+      <div class="mobile-submenu">
+        <a href="about.html">About Us</a>
+        <br>
+        <a href="singers.html">Singers</a>
+      </div>
+    </details>
+    <a href="videos.html" class="current-page">Videos</a>
+    <br>
+    <a href="support.html">Support Us</a>
+    <br>
+    <a href="contact.html">Contact</a>
+    <br>
+  </nav>
+
+  <main>
+    <section class="videos-blurb">
+      <h1>Live Performances</h1>
+      <p>
+        We have provided a few recordings of our prior performances to give you a flavor of what our concerts are like
+        and what you can expect if you bring us out for a service or performance. You can click each image further down
+        the page to navigate to social media uploads of some of our favorite performance moments as BonaVox. We hope you
+        enjoy the music and can experience it live soon!</p>
+    </section>
+
+    <section class="videos">
+      <div class="video-card" id="bairstow">
+        <video src="https://lorem.video/720p"></video>
+        <h2>"Let All Mortal Flesh Keep Silence"</h2>
+        <h3>Edward Bairstow</h3>
+        <div class="content-text" id="text-1">
+          <p>This setting of a classic hymn from the Christian tradition fills any resonant space nicely with it's
+            soaring climax of Alleluias and gentle landing in reverent awe. This recording was taken during our 2024
+            "Mourning" series at St. John the Evangelist, a little church down the bayou in Mermentau.</p>
+        </div>
+        <button onclick="readMore(event, 'text-1', 'button-1')" class="read-more-button" id="button-1">Read
+          more</button>
+      </div>
+
+      <div class="video-card" id="barnett">
+        <video src="https://lorem.video/720p"></video>
+        <h2>"McKay"</h2>
+        <h3>Carol Barnett</h3>
+        <div class="content-text" id="text-2">
+          <p>This is one of three movements from a lovely work by Carol Barnett and one of our favorite pieces to
+            perform. The piece describes the rapture at the arrival into paradise and builds into a roar of wonder and
+            excitement with the sections all moving about each other until they arrive at the final resolution at the
+            end. We hope you enjoy this recording from Holy Trinity Episcopal Church in Vicksburg, Mississippi our 2024
+            Summer Tour.
+          </p>
+        </div>
+        <button onclick="readMore(event, 'text-2', 'button-2')" class="read-more-button" id="button-2">Read
+          more</button>
+      </div>
+
+      <div class="video-card" id="tallis">
+        <video src="https://lorem.video/720p"></video>
+        <h2>"If Ye Love Me"</h2>
+        <h3>Thomas Tallis</h3>
+        <div class="content-text" id="text-3">
+          <p>We have been singing this classic choir anthem since our first days as BonaVox. Please enjoy this recording
+            from our second concert series ever, "Divine Love", at St. Luke-Simpson United Methodist Church in Lake
+            Charles, LA.
+          </p>
+        </div>
+        <button onclick="readMore(event, 'text-3', 'button-3')" class="read-more-button" id="button-3">Read
+          more</button>
+      </div>
+    </section>
+    <h1>facebook videos do not want to be embedded :(</h1>
+  </main>
+
+  <footer>
+    <div class="contact-area">
+      <img class="logo-image" id="logo-footer" src="images/logos:vectors/BV_Logo_2_white.png" alt="">
+      <p>Contact us: <a href="mailto:info@bonavoxswla.org">info@bonavoxswla.org</a></p>
+      <div class="social-icons">
+        <a href="https://www.facebook.com/p/BonaVox-100088946990354/">
+          <i class="fa-brands fa-facebook"></i>
+        </a>
+        <a href="https://www.instagram.com/bonavoxswla/">
+          <i class="fa-brands fa-instagram"></i>
+        </a>
+
+      </div>
+    </div>
+    <div class="credits">
+      <p>© BonaVox SWLA 2026. Site by <a href="https://github.com/freyamurray">Freya Murray</a> </p>
+    </div>
+  </footer>
+
+
+</body>
+
+</html>

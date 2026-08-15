@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Support Us</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="main.js" defer></script>
+    <script src="https://kit.fontawesome.com/7ce2089e78.js" crossorigin="anonymous"></script>
+    <link rel="icon" href="images/logos:vectors/BVicon.ico">
+
+</head>
+
+<body onload="totalPages()">
+    <header>
+        <!-- BANNER -->
+        <a class="logo" href="index.html"><img class="logo-image" id="logo-header"
+                src="images/logos:vectors/BV_Logo_2_0.png" alt="BonaVox logo"></a>
+
+        <nav class="desktop-menu">
+            <a href="index.html">Home</a> |
+            <details name="About">
+                <summary>About</summary>
+                <div class="about-submenu">
+                    <a href="about.html">About Us</a>
+                    <br>
+                    <a href="singers.html">Singers</a>
+                </div>
+            </details> |
+            <a href="videos.html">Videos</a> |
+            <a href="support.html" class="current-page">Support Us</a> |
+            <a href="contact.html">Contact</a>
+        </nav>
+
+        <!-- HAMBURGER MENU  BUTTON-->
+        <button class="menu-button" id="menu-button" onclick="toggleMenu()">
+            <i class="fa-solid fa-bars"></i>
+        </button>
+    </header>
+
+    <!-- MOBILE MENU -->
+    <nav class="mobile-nav" id="mobile-menu" aria-expanded="false" aria-hidden="true">
+        <i class="fa-solid fa-x" onclick="closeMenu()"></i>
+        <br>
+        <a href="index.html">Home</a>
+        <br>
+        <details name="About" onmouseenter="openAboutMobile()">
+            <summary>About</summary>
+            <div class="mobile-submenu">
+                <a href="about.html">About Us</a>
+                <br>
+                <a href="singers.html">Singers</a>
+            </div>
+        </details>
+        <a href="videos.html">Videos</a>
+        <br>
+        <a href="support.html" class="current-page">Support Us</a>
+        <br>
+        <a href="contact.html">Contact</a>
+        <br>
+    </nav>
+
+    <main>
+        <div class="support-blurb">
+            <h1>Support Us</h1>
+            <h2 style="text-align: center; color: var(--text);">Your support is appreciated!</h2>
+            <p>BonaVox is a 501(c)(3) non-profit group of vocal musicians committed to providing high quality
+                performances for the SWLA community. ​Donations to BonaVox are tax deductible. ​We also accept cash and
+                personal checks at concerts and consultations, as well as donations directly to our PayPal: @bonavoxswla
+                MAKE LINK!!</p>
+            <p style="text-align: center; font-style: italic;">Check out our sponsorsip and hiring opportunities below!
+            </p>
+        </div>
+
+        <section class="support-carousel-wrapper">
+            <div class="support-container">
+                <button class="control" id="prev" onclick="prevImg()">
+                    <i class="fa-solid fa-chevron-left"></i>
+                </button>
+                <div class="support-images" id="images">
+                    <img class="img" id="img-1" src="images/support-carousel/1.png"
+                        alt="Take a look at our sponsorship and hiring opportunities">
+                    <img class="img" id="img-2" src="images/support-carousel/2.png" alt="Epiphany: This popular concert series blends the celebrations of Christmas and Mardi Gras in early January. After all the hustle and bustle of the winter holidays, take an evening to relax and enjoy the spirit of the season. Our 2026 program, titled 'A New Day Dawns' intertwines selections from Ola Gjeilo's 'Sunrise Mass' with other pieces on a celestial theme.
+                    Tenebrae: This program is offered on a hired basis, usually during Lent. The music selections reflect on the passion and death of Jesus Christ. This program can be presented as a traditional Tenebrae liturgy, as a concert, or as music during Adoration.
+                    Conversations: A new offering in 2026, Conversations is in development to showcase the artistic and academic work of BonaVox singer-members. This program's inaugural year will be produced by Lindsey Bower as a result of her masters work at Edinburgh Napier University. This will consist of a lecture-recital on singer-songwriter Connie Converse, with Lindsey's arrangements and interpretations of Converse's music.">
+                    <img class="img" id="img-3" src="images/support-carousel/3.png" alt="Spirit: A fun summer concert series celebrating love, joy, and community. This engaging concert features crowd favorites, popular genres, and music appropriate for weddings. The most casual of our offerings, we invite you to show up for a relaxed evening.
+                    Mourning: This annual fall program honors grief and loss, offers love and comfort, and inspires hope. The 2025 program, 'Heavenly Glory' features a new composition from Dr. Jeremi Edwards with text by William Blake, inspired by the Glory Window in the Chapel of Thanksgiving in Dallas, TX, and has been written specifically for our voices.">
+                    <img class="img" id="img-4" src="images/support-carousel/4.png" alt="Sponsor the above concerts for any of the following tiers:
+                    Producer $2000+; Co-Producer $1000-$1999; Assistant Producer $100-$999; In-Kind goods and services">
+                    <img class="img" id="img-5" src="images/support-carousel/5.png" alt="Producer $2000+: Become an annual producer! In return, your logo or name will be prominently recognized on all promotional materials, print and digital, for the entire year, and you will be verbally acknowledged at every concert.
+                    Co-Producer $1000-$1999: Co-Produce a concert series! In return, your logo or name will be prominently displayed on all promotional materials, print and digital, and you will receive verbal acknowledgment at each concert for your chosen series.">
+                    <img class="img" id="img-6" src="images/support-carousel/6.png" alt="Assistant Producer $100-$999: Partner with us! In return your logo or name will be listed on all promotional materials, print and digital, and you will receive verbal acknowledgment for your chosen concert night.
+                    In-Kind goods and services: Not all support is monetary! We're always looking to partner with the community on rehearsal space, performance venues, print and digital media, styling, meals, and other professional services. Let's talk!">
+                    <img class="img" id="img-7" src="images/support-carousel/7.png" alt="Tenebrae Producer $3000+: BonaVox's TENEBRÆ is available for hire depending on availability of singers. The program has a menu of songs for the client to choose from and suggested program order. Fees begin at $3000 and are paid on an agreed upon schedule, culminating in full payment the day of performance. The client may choose to charge admission. TENEBRÆ options are Friday and Saturday evenings, and Sunday afternoons in Lent. February 20-March 22, 2026. Requests due by December 1st.">
+                    <img class="img" id="img-8" src="images/support-carousel/8.png" alt="Weddings, funerals, special services, community events - please contact for pricing and planning. We are honored to provide music for your special occasion. Weddings, funerals, special services, and community events. We have a large library of pieces that can meet your needs and experienced professional singers that will seamlessly uplift your event. Let us know what best suits your needs!
+                        Solo/Duo/Trio
+                        Quartet
+                        Octet
+                        Full Choir
+                        Collaborations with Pianists and Organists">
+                    <img class="img" id="img-9" src="images/support-carousel/9.png" alt="Though we have been conservative in our estimates previously, after 3 years as an organization we can say it generally costs between $3000 and $5000 for BonaVox to produce a concert. As we've scaled over the years, we started with individual contributions at performances, donating our own time and effort to prove Bona Vox and its mission is something necessary and achievable.">
+                    <img class="img" id="img-10" src="images/support-carousel/10.png" alt="In the last year, we received corporate and individual sponsorships, as well as applied for and were awarded grants to fund our existing programs, which noticeably increased the quality and security of our offerings beyond our previous ability. We also were hired to perform programs outside our free concert series.">
+                    <img class="img" id="img-11" src="images/support-carousel/11.png" alt="This year, we're asking for corporate and individual sponsorships again, continuing to apply for grants, graciously accepting individual contributions at performances, and expanding our programs-for-hire. You can unlock access to high-quality music across SWLA and beyond.">
+                    <img class="img" id="img-12" src="images/support-carousel/12.png" alt="When you partner with BonaVox, you enrich your community. We believe that everyone should have access to high-quality music making, which is why our self-produced, established concert series offerings will NEVER charge admission and why we strive to perform in geographically diverse venues. Our singers are technically, academically, and artistically proficient professionals, consistently investing in their craft and community.">
+                    <img class="img" id="img-13" src="images/support-carousel/13.png" alt="SWLA is culturally rich in music and talent. We strive to be ambassadors for SWLA globally. We seek to establish an enduring legacy for future generations of music artists of all genres, which includes resilient and accessible music education and appreciation for all ages. When you sponsor or hire BonaVox, you do more than fund a concert. You funds present accessibility to music and a lasting legacy for SWLA.">
+                </div>
+                <button class="control" id="next" onclick="nextImg()">
+                    <i class="fa-solid fa-chevron-right"></i>
+                </button>
+            </div>
+            <div class="pages">
+                <p>
+                    <span id="page-no">
+                        1
+                    </span> / <span id="page-ttl"> </span>
+                </p>
+
+            </div>
+        </section>
+
+        <section class="sponsorships">
+            <h1>Sponsorships and Donations</h1>
+            <div class="sponsorships-grid">
+                <div class="sponsorship-card" id="producer-card">
+                    <h2>2026 Producer-Level Sponsorship</h2>
+                    <p class="price">$2,000</p>
+                    <p class="sponsor-blurb big">
+                        Your logo or name will be prominently recognized on all promotional materials, print and
+                        digital, for the entire year, and you will be verbally acknowledged at every concert.
+                    </p>
+                    <p class="valid">Valid for one year</p> <br>
+                    <!-- ADD LINK TO THIRD PARTY SITE  -->
+                    <a href="#" class="sponsor-link">
+                        Buy Now
+                    </a>
+                    <div class="perks">
+                        <p>Corporate or individual sponsorships</p>
+                        <p>Branding and message on all public concerts</p>
+                        <p>Annual sponsorship</p>
+                    </div>
+                </div>
+
+                <div class="sponsorship-card" id="co-producer-card">
+                    <h2>2026 Co-Producer-Level Sponsorship</h2>
+                    <p class="price">$1,000</p>
+                    <p class="sponsor-blurb big">
+                        Your logo or name will be prominently displayed on all promotional materials, print and digital,
+                        and you will receive verbal acknowledgment at each concert for your chosen series.
+                    </p>
+                    <p class="valid">Valid for one year</p> <br>
+                    <!-- ADD LINK TO THIRD PARTY SITE  -->
+                    <a href="#" class="sponsor-link">
+                        Buy Now
+                    </a>
+                    <div class="perks">
+                        <p>Name in program</p>
+                        <p>Three social media posts promoting your business</p>
+                        <p>Series sponsor -- you choose the series</p>
+                    </div>
+                </div>
+
+                <div class="sponsorship-card" id="asst-producer-card">
+                    <h2>2026 Assistant Producer-Level Sponsorship</h2>
+                    <p class="price">$500</p>
+                    <p class="sponsor-blurb big">
+                        Your logo or name will be listed on all promotional materials, print and digital, and you will
+                        receive verbal acknowledgment for your chosen concert night.
+                    </p>
+                    <p class="valid">Valid for one year</p> <br>
+                    <!-- ADD LINK TO THIRD PARTY SITE  -->
+                    <a href="#" class="sponsor-link">
+                        Buy Now
+                    </a>
+                    <div class="perks">
+                        <p>Name in program</p>
+                        <p>One social media post promoting your business</p>
+                        <p>Specific concert sponsorship</p>
+                    </div>
+                </div>
+
+                <div class="sponsorship-card" id="500-card">
+                    <h2>$500 Donation to Bonavox</h2>
+                    <p class="price">$500</p>
+                    <p class="sponsor-blurb">
+                        One time $500 donation to BonaVox. Thank you for your support!
+                    </p>
+                    <p class="valid">One-off payment</p> <br>
+                    <!-- ADD LINK TO THIRD PARTY SITE  -->
+                    <a href="#" class="sponsor-link">
+                        Buy Now
+                    </a>
+                    <div class="perks">
+                        <p>Individual sponsorship</p>
+                        <p>Name in program</p>
+                    </div>
+                </div>
+
+                <div class="sponsorship-card" id="100-card">
+                    <h2>$100 Donation to Bonavox</h2>
+                    <p class="price">$100</p>
+                    <p class="sponsor-blurb">
+                        One time $100 donation to BonaVox. Thank you for your support!
+
+                    </p>
+                    <p class="valid">One-off payment</p> <br>
+                    <!-- ADD LINK TO THIRD PARTY SITE  -->
+                    <a href="#" class="sponsor-link">
+                        Buy Now
+                    </a>
+                    <div class="perks">
+                        <p>Individual sponsorship</p>
+                        <p class="blank-perk">blank</p>
+                    </div>
+                </div>
+
+                <div class="sponsorship-card" id="50-card">
+                    <h2>$50 Donation to Bonavox</h2>
+                    <p class="price">$50</p>
+                    <p class="sponsor-blurb">
+                        One time $50 donation to BonaVox. Thank you for your support!
+
+                    </p>
+                    <p class="valid">One-off payment</p> <br>
+                    <!-- ADD LINK TO THIRD PARTY SITE  -->
+                    <a href="#" class="sponsor-link">
+                        Buy Now
+                    </a>
+                    <div class="perks">
+                        <p>Individual sponsorship</p>
+                        <p class="blank-perk">blank</p>
+                    </div>
+                </div>
+
+                <div class="sponsorship-card" id="25-card">
+                    <h2>$25 Donation to Bonavox</h2>
+                    <p class="price">$25</p>
+                    <p class="sponsor-blurb">
+                        One time $25 donation to BonaVox. Thank you for your support!
+
+                    </p>
+                    <p class="valid">One-off payment</p> <br>
+                    <!-- ADD LINK TO THIRD PARTY SITE  -->
+                    <a href="#" class="sponsor-link">
+                        Buy Now
+                    </a>
+                    <div class="perks">
+                        <p>Individual sponsorship</p>
+                        <p class="blank-perk">blank</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="goals">
+            <h1>Our Goals</h1>
+            <h2>we have so many goals and opportunities!</h2>
+            <div class="goals-grid">
+                <div class="goal-card" id="goal-card-1">
+                    <div class="number">1</div>
+                    <p>As part of our mission to provide access to high-quality music performances, BonaVox intends to
+                        bring
+                        a free concert to a retirement community, hospital or prison each concert series.</p>
+                    <p>We do not ask these audiences for financial support, and would appreciate if the wider community
+                        could help offset these costs.</p>
+                </div>
+
+                <div class="goal-card" id="goal-card-2">
+                    <div class="number">2</div>
+                    <p>BonaVox would love to produce an award-winning album. Lets get a Grammy!</p>
+                    <img src="images/photographs/grammy1.avif"
+                        alt="Female Bonavox members edited to be holding GRAMMY awards">
+                    <!-- <img src="images/photographs/grammy2.avif" alt="Male Bonavox members edited to be holding GRAMMY awards"> -->
+                </div>
+
+                <div class="goal-card" id="goal-card-3">
+                    <div class="number">3</div>
+                    <p>BonaVox wants to ensure a pipeline for college-level music students to achieve their professional
+                        goals</p>
+                    <p>Help us fund a scholarship that includes mentorship from our members and professional development
+                        opportunities to support their future careers.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="contact-area">
+            <img class="logo-image" id="logo-footer" src="images/logos:vectors/BV_Logo_2_white.png" alt="BonaVox logo white">
+            <p>Contact us: <a href="mailto:info@bonavoxswla.org">info@bonavoxswla.org</a></p>
+            <div class="social-icons">
+                <a href="https://www.facebook.com/p/BonaVox-100088946990354/">
+                    <i class="fa-brands fa-facebook"></i>
+                </a>
+                <a href="https://www.instagram.com/bonavoxswla/">
+                    <i class="fa-brands fa-instagram"></i>
+                </a>
+
+            </div>
+        </div>
+        <div class="credits">
+            <p>© BonaVox SWLA 2026. Site by <a href="https://github.com/freyamurray">Freya Murray</a> </p>
+        </div>
+    </footer>
+
+</body>
+
+
+
+</html>
