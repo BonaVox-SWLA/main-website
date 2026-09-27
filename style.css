@@ -386,6 +386,7 @@ footer {
   backdrop-filter: blur(0.3rem);
   transition: 0.5s;
   border-radius: 1rem;
+  aspect-ratio: 1;
 }
 
 .evt-blurb-text, .singer-blurb-text {
@@ -516,7 +517,8 @@ footer {
   img {
     width: 100%;
     border-radius: 1rem;
-    object-fit: contain;
+    aspect-ratio: 1;
+    object-fit: cover;
   }
 }
 
