@@ -481,6 +481,7 @@ footer {
   margin: 1rem;
   background-image: url(images/photographs/about-image-2.avif);
   background-size: cover;
+  background-position: center;
   mix-blend-mode: normal;
   background-repeat: no-repeat;
   position: relative;
