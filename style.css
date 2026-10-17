@@ -249,6 +249,7 @@ footer {
   background-image: url(images/photographs/home-image-landscape.jpg);
   /* IMAGE CAN BE CHANGED */
   background-size: cover;
+  background-position: center;
   opacity: 0.9;
   mix-blend-mode: normal;
   background-repeat: no-repeat;
@@ -440,6 +441,7 @@ footer {
 #hero-about {
   background-image: url(images/photographs/about-image.avif);
   background-size: cover;
+  background-position: center;
   mix-blend-mode: normal;
   background-repeat: no-repeat;
   position: relative;
