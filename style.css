@@ -90,19 +90,21 @@ main {
 }
 
 /* header */
+
 header {
   display: flex;
-  position: sticky;
-  top: 0;
-  background:
+  z-index: 10;
+    background:
     linear-gradient(10deg, var(--pink), transparent),
     linear-gradient(100deg, var(--purple), transparent, transparent),
     linear-gradient(-0deg, var(--yellow), transparent), no-repeat;
   backdrop-filter: blur(5px);
-
   background-blend-mode: lighten;
-  z-index: 10;
+  width: 100%;
+  position: sticky;
+  top: 0;
 }
+
 
 .logo-image {
   width: 8rem;
@@ -262,7 +264,7 @@ footer {
   z-index: 2;
   font-size: 1.8rem;
   padding-right: 1rem;
-  background: linear-gradient(var(--clear), rgba(0, 0, 0, .6));
+  background: linear-gradient(var(--clear), rgba(0, 0, 0, 0.6));
   border-radius: 1rem;
   margin: 0;
   margin-left: -2rem;
@@ -389,15 +391,18 @@ footer {
   aspect-ratio: 1;
 }
 
-.evt-blurb-text, .singer-blurb-text {
+.evt-blurb-text,
+.singer-blurb-text {
   position: absolute;
   bottom: 0;
   color: var(--accent-text);
   padding: 2rem;
 }
 
-.evt-blurb-text, .singer-blurb-text {
-  a, p {
+.evt-blurb-text,
+.singer-blurb-text {
+  a,
+  p {
     color: var(--accent-text);
   }
 
@@ -405,7 +410,6 @@ footer {
     text-decoration: underline;
   }
 }
-
 
 #concert-overflow {
   display: none;
@@ -523,7 +527,8 @@ footer {
 }
 
 /* || INDIVIDUAL SINGER PAGES */
-.singer-hero, .event-hero {
+.singer-hero,
+.event-hero {
   display: grid;
   grid-template-columns: auto auto;
   column-gap: 3rem;
@@ -531,7 +536,6 @@ footer {
   img {
     align-content: center;
   }
-
 
   h1 {
     text-align: start;
@@ -573,7 +577,7 @@ footer {
 }
 
 .affiliations-grid {
-  display: grid; 
+  display: grid;
   grid-template-columns: repeat(auto-fit, minmax(100px, 200px));
   gap: 2rem;
   margin: auto;
@@ -582,13 +586,12 @@ footer {
   justify-content: center;
 
   .card {
-    transition-duration: .3s;
+    transition-duration: 0.3s;
   }
 
   .card:hover {
     scale: 110%;
   }
-
 }
 
 /* || VIDEOS */
@@ -683,7 +686,7 @@ footer {
   display: block;
   flex-shrink: 0;
   transition: 0.5s;
-  border-radius: unset
+  border-radius: unset;
 }
 
 .support-images {
@@ -876,7 +879,7 @@ textarea {
   border-radius: 0.5rem;
   border: none;
   font-size: 1rem;
-  margin-top: .2rem;
+  margin-top: 0.2rem;
 }
 
 .req {
@@ -917,9 +920,9 @@ input {
   font-size: 2rem;
   text-align: center;
   width: 100%;
-  
+
   i {
-    margin: 0 .5rem;
+    margin: 0 0.5rem;
   }
 
   h2 {
@@ -989,7 +992,8 @@ input {
   }
 
   /* singer page  */
-  .singer-hero, .event-hero {
+  .singer-hero,
+  .event-hero {
     grid-template-columns: auto;
   }
 
@@ -1002,7 +1006,8 @@ input {
     }
   }
 
-  .singer-image, .event-image {
+  .singer-image,
+  .event-image {
     order: -1;
   }
   .tags {
@@ -1019,7 +1024,6 @@ input {
   .support-container {
     margin: auto;
     padding: 0 3rem;
-
   }
 
   .control {
