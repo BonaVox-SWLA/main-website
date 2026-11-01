@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Join the BonaVox email list</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <main class="contact-container">
+        <h1>Stay in the loop</h1>
+        <p>Get BonaVox concert announcements, news, and occasional updates. You can unsubscribe at any time.</p>
+        <form id="contact-form" method="post">
+            <div class="form-input">
+                <label for="name">Name</label>
+                <input type="text" name="name" id="name" autocomplete="name">
+            </div>
+            <div class="form-input">
+                <label for="email">Email <span class="req">*</span></label>
+                <input type="email" name="email" id="email" autocomplete="email" required>
+            </div>
+            <div class="form-input">
+                <label>
+                    <input type="checkbox" name="consent" required style="width: auto; margin-right: 0.5rem;">
+                    I agree to receive email updates from BonaVox.
+                </label>
+            </div>
+            <div class="form-input">
+                <button class="submit-btn" type="submit">Sign me up</button>
+            </div>
+            <p id="form-status" role="status" aria-live="polite"></p>
+        </form>
+    </main>
+
+    <script>
+        const PLUNK_PUBLIC_KEY = "pk_REPLACE_WITH_YOUR_ROTATED_PUBLIC_KEY";
+        const form = document.getElementById("contact-form");
+        const status = document.getElementById("form-status");
+        const submitButton = form.querySelector('button[type="submit"]');
+
+        form.addEventListener("submit", async (event) => {
+            event.preventDefault();
+
+            if (PLUNK_PUBLIC_KEY === "pk_REPLACE_WITH_YOUR_ROTATED_PUBLIC_KEY") {
+                status.textContent = "This signup form has not been configured yet.";
+                return;
+            }
+
+            const fields = new FormData(form);
+            status.textContent = "Signing you up…";
+            submitButton.disabled = true;
+
+            try {
+                const response = await fetch("https://next-api.useplunk.com/v1/track", {
+                    method: "POST",
+                    headers: {
+                        "Authorization": `Bearer ${PLUNK_PUBLIC_KEY}`,
+                        "Content-Type": "application/json"
+                    },
+                    body: JSON.stringify({
+                        email: fields.get("email"),
+                        event: "newsletter.signup",
+                        subscribed: true,
+                        data: {
+                            name: fields.get("name")
+                        }
+                    })
+                });
+
+                if (!response.ok) {
+                    throw new Error(`Plunk returned HTTP ${response.status}.`);
+                }
+
+                form.reset();
+                status.textContent = "Thanks for signing up! You're on the BonaVox email list.";
+            } catch (error) {
+                console.error("Could not add email signup to Plunk.", error);
+                status.textContent = "Sorry, we couldn't sign you up. Please try again.";
+            } finally {
+                submitButton.disabled = false;
+            }
+        });
+    </script>
+</body>
+
+</html>

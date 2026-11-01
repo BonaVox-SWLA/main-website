@@ -405,6 +405,99 @@
             <p>© BonaVox SWLA 2026. Site by <a href="https://github.com/freyamurray">Freya Murray</a> </p>
         </div>
     </footer>
+
+    <!-- NEWSLETTER SIGN UP POP UP -->
+    <dialog class="newsletter-dialog" id="newsletter-dialog" aria-labelledby="newsletter-title"
+        aria-describedby="newsletter-description">
+        <button class="newsletter-close" id="newsletter-close" type="button"
+            aria-label="Close signup form">&times;</button>
+        <h2 id="newsletter-title">Stay in the loop</h2>
+        <p id="newsletter-description">Get BonaVox concert announcements, news, and occasional updates. You can
+            unsubscribe at any time.</p>
+        <form id="newsletter-form">
+            <div class="form-input">
+                <label for="newsletter-name">Name</label>
+                <input type="text" name="name" id="newsletter-name" autocomplete="name">
+            </div>
+            <div class="form-input">
+                <label for="newsletter-email">Email <span class="req">*</span></label>
+                <input type="email" name="email" id="newsletter-email" autocomplete="email" required>
+            </div>
+            <div class="form-input newsletter-consent">
+                <label for="newsletter-consent">
+                    <input type="checkbox" name="consent" id="newsletter-consent" required>
+                    I agree to receive email updates from BonaVox.
+                </label>
+            </div>
+            <div class="form-input">
+                <button class="submit-btn" type="submit">Sign me up</button>
+            </div>
+        </form>
+        <p id="newsletter-status" role="status" aria-live="polite"></p>
+    </dialog>
+
+    <script>
+        const PLUNK_PUBLIC_KEY = "pk_3f7a1c804cae0e2894a6fa751ba8d525be4a3905f8ef7212a88bca0effce6fa3";
+        const newsletterDialog = document.getElementById("newsletter-dialog");
+        const newsletterDescription = document.getElementById("newsletter-description");
+        const newsletterForm = document.getElementById("newsletter-form");
+        const newsletterStatus = document.getElementById("newsletter-status");
+        const newsletterSubmit = newsletterForm.querySelector('button[type="submit"]');
+        const newsletterDismissedKey = "bonavoxNewsletterDismissed";
+
+        if (sessionStorage.getItem(newsletterDismissedKey) !== "true") {
+            window.setTimeout(() => newsletterDialog.showModal(), 5000);
+        }
+
+        newsletterDialog.addEventListener("close", () => {
+            sessionStorage.setItem(newsletterDismissedKey, "true");
+        });
+
+        document.getElementById("newsletter-close").addEventListener("click", () => {
+            newsletterDialog.close();
+        });
+
+        newsletterForm.addEventListener("submit", async (event) => {
+            event.preventDefault();
+
+            const fields = new FormData(newsletterForm);
+            newsletterStatus.textContent = "Signing you up…";
+            newsletterSubmit.disabled = true;
+
+            try {
+                const response = await fetch("https://next-api.useplunk.com/v1/track", {
+                    method: "POST",
+                    headers: {
+                        "Authorization": `Bearer ${PLUNK_PUBLIC_KEY}`,
+                        "Content-Type": "application/json"
+                    },
+                    body: JSON.stringify({
+                        email: fields.get("email"),
+                        event: "newsletter.signup",
+                        subscribed: true,
+                        data: {
+                            name: fields.get("name")
+                        }
+                    })
+                });
+
+                if (!response.ok) {
+                    throw new Error(`Plunk returned HTTP ${response.status}.`);
+                }
+
+                newsletterForm.reset();
+                newsletterForm.hidden = true;
+                newsletterDescription.hidden = true;
+                sessionStorage.setItem(newsletterDismissedKey, "true");
+                newsletterStatus.textContent = "Thank you for signing up! You have been added to the BonaVox email list.";
+            } catch (error) {
+                console.error("Could not add email signup to Plunk.", error);
+                newsletterStatus.textContent = "Sorry, we couldn't sign you up. Please try again.";
+            } finally {
+                newsletterSubmit.disabled = false;
+            }
+        });
+    </script>
 </body>
 
 </html>

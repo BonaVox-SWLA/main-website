@@ -916,6 +916,59 @@ input {
   background-color: var(--accent-foc);
 }
 
+.newsletter-dialog {
+  position: fixed;
+  width: min(32rem, calc(100% - 2rem));
+  max-width: none;
+  max-height: calc(100% - 2rem);
+  padding: 2rem;
+  border: 2px solid var(--accent);
+  border-radius: 1rem;
+  color: var(--text);
+  background-color: var(--menu);
+  box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.3);
+}
+
+.newsletter-dialog::backdrop {
+  background: rgba(30, 15, 35, 0.65);
+}
+
+.newsletter-dialog h2 {
+  margin: 0 2rem 0.5rem 0;
+  font-size: 1.7rem;
+}
+
+.newsletter-dialog p {
+  margin: 0.5rem;
+}
+
+.newsletter-dialog .form-input {
+  margin: 0.75rem 0;
+}
+
+.newsletter-dialog button[type="submit"] {
+  display: flex;
+  margin: auto;
+  padding: .75rem;
+  border-radius: .5rem;
+}
+
+.newsletter-consent input {
+  width: auto;
+  margin-right: 0.5rem;
+}
+
+.newsletter-close {
+  position: absolute;
+  top: 0.5rem;
+  right: 0.75rem;
+  border: 0;
+  background: transparent;
+  color: var(--text);
+  font-size: 2rem;
+  cursor: pointer;
+}
+
 /* || EVENT PAGE */
 
 .share {
